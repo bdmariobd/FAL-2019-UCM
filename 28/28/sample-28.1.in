@@ -1,0 +1,105 @@
+4 20 15
+15 7
+10 10
+5 6
+10 8
+6 20 15
+5 7
+3 10
+10 8
+5 6
+8 8
+7 6
+2 10 10
+10 7
+15 4
+0 0 0
+
+
+//*****************
+// IMPORTANTE
+//
+// Nombre y apellidos del alumno
+// Usuario del juez de clase
+// Usuario del juez de examen que has utilizado en la prueba de hoy
+//
+//***************************************************
+#include <iostream>
+#include <fstream>
+#include <vector>
+#include <string>
+#include <cmath>
+#include <algorithm>
+
+//*******************************
+// Aqui explicacion del algoritmo de vuelta atras. Como es el vector solucion y como se obtiene
+//
+//
+//*******************************
+
+// Para una cancion
+struct tCancion {
+    int duracion;  // Duracion de la cancion
+    int satisfaccion;  // Puntuacion dada a la cancion
+};
+
+// Lectura de los datos de una cancion
+std::istream& operator>> (std::istream& in, tCancion& d){
+    in >> d.duracion >> d.satisfaccion;
+    return in;
+}
+
+// Para los datos de entrada
+struct tDatos {
+    int numCanciones;  // Numero de canciones
+    int tiempoViajeIda; // Duracion del viaje de ida
+    int tiempoViajeVuelta;  // Duracion del viaje de vuelta
+    std::vector<tCancion> canciones;  // Duracion y puntuacion de cada cancion
+};
+
+// Aqui las funciones implementadas por el alumno
+
+
+
+
+
+
+
+bool  resuelveCaso() {
+    // lectura de datos
+    tDatos d;
+    std::cin >> d.numCanciones >> d.tiempoViajeIda >> d.tiempoViajeVuelta;
+    if (d.numCanciones == 0 && d.tiempoViajeIda == 0 && d.tiempoViajeVuelta == 0) return false;
+    d.canciones.resize(d.numCanciones);
+    for (int i = 0;  i < d.numCanciones; ++i)  
+        std::cin >> d.canciones[i];
+    
+    // Preparar los datos para llamada a VA
+
+
+    // llamada a VA
+
+    
+    // Escribir resultado
+
+
+    return true;
+}
+
+
+int main() {
+
+ #ifndef DOMJUDGE
+    std::ifstream in("datos.txt");
+    auto cinbuf = std::cin.rdbuf(in.rdbuf()); 
+#endif
+    
+    while (resuelveCaso()) {} //Resolvemos todos los casos
+    
+#ifndef DOMJUDGE // para dejar todo como estaba al principio
+    std::cin.rdbuf(cinbuf);
+    system("PAUSE");
+#endif
+    
+    return 0;
+}

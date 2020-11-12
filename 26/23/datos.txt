@@ -1,0 +1,93 @@
+3 5 2
+5 10 2
+1 8 4
+3 10 3
+4 7 7
+1 7 6
+4 2 4
+5 5 5 5
+7 7 7 7
+3 3 2
+10 10 8
+8 9 1
+1 7 8
+0 0 0
+
+
+
+//*****************
+// IMPORTANTE
+//
+// Nombre y apellidos del alumno
+// Usuario del juez de clase
+// Usuario del juez de examen que has utilizado en la prueba de hoy
+//
+//***************************************************
+
+#include <iostream>
+#include <fstream>
+#include <vector>
+
+//*******************************
+// Aqui explicacion del algoritmo de vuelta atras. Como es el vector solucion y como se obtiene
+//
+//
+//*******************************
+
+template <class T>
+using tMatriz = std::vector<std::vector<T>>;
+
+struct tDatos {
+    int numTareas; // Numero de tareas a realizar
+    int numAlumnos;  // Numero de alumnos de la clase
+    int maxTareas;   // maximo numero de tareas que puede realizar un alumno
+    tMatriz<int> preferencias;  // En cada fila las preferencias de cada alumno a cada tarea
+};
+
+// Aqui las funciones implementadas por el alumno
+
+
+
+
+
+bool resuelveCaso() {
+    // Lectura de los datos de entrada
+    tDatos d;
+    std::cin >> d.numTareas >> d.numAlumnos >> d.maxTareas;
+    if (d.numTareas == 0 && d.numAlumnos == 0 &&  d.maxTareas == 0) return false;
+    // lectura de las preferencias
+    d.preferencias.resize(d.numAlumnos, std::vector<int>(d.numTareas));
+    for (int i = 0; i < d.numAlumnos; ++i) 
+        for (int j = 0; j < d.numTareas; ++j) 
+            std::cin >> d.preferencias[i][j];
+    // preparar datos para la llamada a la funcion de VA
+
+
+
+    // LLamada a la funcion de VA
+
+
+    // Escribir solucion
+
+    
+    return true;
+}
+
+int main() {
+    // Para la entrada por fichero.
+#ifndef DOMJUDGE
+    std::ifstream in("datos.txt");
+    auto cinbuf = std::cin.rdbuf(in.rdbuf()); 
+#endif
+    
+    while (resuelveCaso())
+        ;
+    
+    // Para restablecer entrada. 
+#ifndef DOMJUDGE 
+    std::cin.rdbuf(cinbuf);
+    system("PAUSE");
+#endif
+    
+    return 0;
+}

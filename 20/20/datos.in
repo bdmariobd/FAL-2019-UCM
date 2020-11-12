@@ -1,0 +1,71 @@
+4 2
+50 100 50 100
+50 100
+5 3
+200 100 30 50 100
+300 50 100
+3 2
+100 180 50
+200 100
+10 2 
+40 30 100 100 100 100 80 120 100 200
+300 300
+0 0
+
+
+
+//*****************
+// IMPORTANTE
+//
+// Nombre y apellidos del alumno
+// Usuario del juez de clase
+// Usuario del juez de examen que has utilizado en la prueba de hoy
+//
+//***************************************************
+
+#include <iostream>
+#include <fstream>
+#include <vector>
+#include <algorithm>
+
+
+//*******************************
+// Explicacion del algoritmo de vuelta atras. 
+// Como es la solucion del problema y el arbol de ejecucion
+// Coste de la funcion esValida 
+//*******************************
+
+// Aqui las funciones implementadas por el alumno
+
+
+
+
+
+// Resuelve un caso de prueba, leyendo de la entrada la
+// configuración, y escribiendo la respuesta
+bool resuelveCaso() {
+    // leer los datos de la entrada
+    int numDias, numAbrigos;
+    std::cin >> numDias;
+    if (numDias == 0) return false;
+    std::cin >> numAbrigos;
+    
+    // leer probabilidad de precipitacion
+    
+    // leer caracteristicas de los abrigos
+
+    // LLamar a la funcion de vuelta atras
+
+    // Escribir resultado
+    //if ..... std::cout << "Lo puedes comprar\n";
+    //else std::cout << numSoluciones << '\n';
+    return true;
+}
+
+int main() {    
+    
+    while (resuelveCaso())
+        ;
+    
+    return 0;
+}
